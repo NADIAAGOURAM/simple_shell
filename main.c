@@ -18,11 +18,9 @@ const int RUNNING = 1;
 while (RUNNING)
 {
 if (isatty(STDIN_FILENO))
-{
 /*The isatty returns 1 if the stdin is a terminal and 0 otherwise.*/
-fflush(stdout);
 _printf("#cisfun$ ");
-}
+
 cmdline = ReadCmdL();
 if (cmdline == NULL)
 {
@@ -43,7 +41,7 @@ ExecCmdL(toks);
 }
 
 free_array(toks);
-free(cmdline);
 }
+free(cmdline);
 return (0);
 }
