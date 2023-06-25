@@ -1,6 +1,65 @@
 #include "main.h"
 
 /**
+* ReadCmdL - reads line command from input stream
+* Return : char
+*/
+char *ReadCmdL(void)
+{
+char *buffer = NULL;
+size_t bufsize = 0;
+ssize_t bytesRead;
+
+bytesRead = getline(&buffer, &bufsize, stdin);
+if (bytesRead == -1)
+{
+if (feof(stdin))
+{
+exit(EXIT_SUCCESS);
+}
+else
+{
+perror("ReadCmdL: getline\n");
+free(buffer);
+exit(EXIT_FAILURE);
+}
+}
+return (buffer);
+}
+
+/**
+* ToknizeCmdL - Splits the command line into a program and arguments.
+* @buffer: string
+* Return:char
+*/
+
+char **ToknizeCmdL(char *buffer)
+{
+int bufsize = TOK_BUFSIZE;
+int i = 0;
+char **toks = NULL;
+char *token;
+
+toks = malloc(bufsize * sizeof(char *));
+if (!toks)
+{
+perror("ToknizeCmdL: allocation error\n");
+free(buffer);
+exit(EXIT_FAILURE);
+}
+
+token = strtok(buffer, TOK_DELIM);
+while (token != NULL)
+{
+toks[i] = strdup(token);
+i++;
+token = strtok(NULL, TOK_DELIM);
+}
+toks[i] = NULL;
+return (toks);
+}
+
+/**
 * ExecCmdL - executes commands
 * @toks: string
 * Return: int
