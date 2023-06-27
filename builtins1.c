@@ -27,6 +27,7 @@ bool Built_in(char **toks)
 		}
 		i++;
 	}
+	free_array(toks);
 	return (false);
 }
 
