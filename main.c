@@ -25,6 +25,7 @@ cmdline = ReadCmdL();
 if (cmdline == NULL)
 {
 	fprintf(stderr, "Error reading command line.\n");
+	free(cmdline);
 	exit(1);
 }
 toks = ToknizeCmdL(cmdline);
@@ -32,6 +33,7 @@ if (toks == NULL)
 {
 	fprintf(stderr, "Error tokenizing command line.\n");
 	free(cmdline);
+	free_array(toks);
 	exit(1);
 }
 if (toks[0] != NULL)
@@ -41,7 +43,9 @@ ExecCmdL(toks);
 }
 
 free_array(toks);
+free(cmdline);
 }
+free_array(toks);
 free(cmdline);
 return (0);
 }
