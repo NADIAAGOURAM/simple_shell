@@ -1,11 +1,11 @@
 C Simple Shell Project
 
 Task 1. <br>
-	Write a UNIX command line interpreter.<br>
+	Write a UNIX command line interpreter. <br>
 Task 2. <br>
-	Handle command lines with arguments.
-Task 3.
-	Handle the PATH
+	Handle command lines with arguments. <br>
+Task 3. <br>
+	Handle the PATH <br>
 	fork must not be called if the command doesn’t exist
 Task 4.
 	Implement the exit built-in, that exits the shell
