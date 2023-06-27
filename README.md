@@ -13,9 +13,9 @@ Task 4. <br>
 	You don’t have to handle any argument to the built-in exit <br>
 Task 5. <br>
 	Implement the env built-in, that prints the current environment <br>
-Task 8.
-	handle arguments for the built-in exit
-	Usage: exit status, where status is an integer used to exit the shell
+Task 8. <br>
+	handle arguments for the built-in exit <br>
+	Usage: exit status, where status is an integer used to exit the shell <br>
 Task 9.
 	Implement the setenv and unsetenv builtin commands
 		setenv
