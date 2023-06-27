@@ -1,7 +1,7 @@
 C Simple Shell Project
 
 Task 1. <br>
-	Write a UNIX command line interpreter. <br>
+	<BLOCKQUOTE> Write a UNIX command line interpreter. <br> </BLOCKQUOTE>
 Task 2. <br>
 	Handle command lines with arguments. <br>
 Task 3. <br>
