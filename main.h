@@ -31,6 +31,10 @@ void built_unsetenv(char **toks);
 void change_directory(const char *directory);
 void free_array(char **array);
 void _printf(const char *str);
+void handleComments(char *str);
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
+char *_strdup(char *str);
 
 /**
  * struct builtin - struct for the builtins

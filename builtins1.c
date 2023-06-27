@@ -10,17 +10,17 @@ bool Built_in(char **toks)
 {
 	int i = 0;
 	builtin builtins[] = {
+		{"cd", built_cd},
 		{"exit", built_exit},
 		{"env", built_env},
 		{"setenv", built_setenv},
 		{"unsetenv", built_unsetenv},
-		{"cd", built_cd},
 		{NULL, NULL}
 	};
 
 	while (builtins[i].cmd != NULL)
 	{
-		if (strcmp(toks[0], builtins[i].cmd) == 0)
+		if (_strcmp(toks[0], builtins[i].cmd) == 0)
 		{
 			builtins[i].funct(toks);
 			return (true);
@@ -46,7 +46,7 @@ void built_cd(char **toks)
 	}
 	else
 	{
-		if (strcmp(toks[1], "-") == 0)
+		if (_strcmp(toks[1], "-") == 0)
 		{
 			/*Change to the previous directory*/
 			predir = getenv("OLDPWD");
@@ -74,7 +74,8 @@ void change_directory(const char *directory)
 		/*Update the PWD environment variable*/
 		cwd = getcwd(NULL, 0);
 		setenv("PWD", cwd, 1);
-		printf("%s\n", cwd);
+		_printf(cwd);
+		_printf("\n");
 		free(cwd);
 	}
 	else

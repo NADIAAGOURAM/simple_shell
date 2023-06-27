@@ -24,15 +24,15 @@ _printf("#cisfun$ ");
 cmdline = ReadCmdL();
 if (cmdline == NULL)
 {
-	fprintf(stderr, "Error reading command line.\n");
+	perror("Error reading command line.\n");
 	free(cmdline);
 	exit(1);
 }
 toks = ToknizeCmdL(cmdline);
 if (toks == NULL)
 {
-	fprintf(stderr, "Error tokenizing command line.\n");
-	free(cmdline);
+	perror("Error tokenizing command line.\n");
+i	free(cmdline);
 	exit(1);
 }
 if (toks[0] != NULL)

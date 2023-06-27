@@ -25,6 +25,8 @@ free(buffer);
 exit(EXIT_FAILURE);
 }
 }
+/*Handle comments in the command line*/
+handleComments(buffer);
 return (buffer);
 }
 
@@ -52,7 +54,7 @@ exit(EXIT_FAILURE);
 token = strtok(buffer, TOK_DELIM);
 while (token != NULL)
 {
-toks[i] = strdup(token);
+toks[i] = _strdup(token);
 if (toks[i] == NULL)
 {
 free_array(toks);
@@ -123,7 +125,7 @@ dir = strtok(path, ":");
 
 while (dir != NULL)
 {
-full_path_len = strlen(dir) + strlen(cmd) + 2;
+full_path_len = _strlen(dir) + _strlen(cmd) + 2;
 full_path = malloc(full_path_len);
 
 if (full_path == NULL)
@@ -142,6 +144,8 @@ free(full_path);
 dir = strtok(NULL, ":");
 }
 }
-fprintf(stderr, "Command not found: %s\n", cmd);
+_printf("Command not found: ");
+_printf(cmd);
+_printf("\n");
 exit(EXIT_FAILURE);
 }

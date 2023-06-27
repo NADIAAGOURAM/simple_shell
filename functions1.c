@@ -35,3 +35,23 @@ i++;
 }
 free(array);
 }
+
+/**
+ * handleComments - handle comments
+ * @str: string
+ * Return: void
+*/
+void handleComments(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		if (str[i] == '#')
+		{
+			str[i] = '\0';
+			break;
+		}
+		i++;
+	}
+}
