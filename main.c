@@ -25,6 +25,7 @@ cmdline = ReadCmdL();
 if (cmdline == NULL)
 {
 	fprintf(stderr, "Error reading command line.\n");
+	free(cmdline);
 	exit(1);
 }
 toks = ToknizeCmdL(cmdline);
@@ -43,5 +44,6 @@ ExecCmdL(toks);
 free_array(toks);
 free(cmdline);
 }
+free(cmdline);
 return (0);
 }

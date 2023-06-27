@@ -15,6 +15,7 @@ if (bytesRead == -1)
 {
 if (feof(stdin))
 {
+free(buffer);
 exit(EXIT_SUCCESS);
 }
 else
