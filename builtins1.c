@@ -23,11 +23,11 @@ bool Built_in(char **toks)
 		if (strcmp(toks[0], builtins[i].cmd) == 0)
 		{
 			builtins[i].funct(toks);
+			free_array(toks);
 			return (true);
 		}
 		i++;
 	}
-	free_array(toks);
 	return (false);
 }
 
