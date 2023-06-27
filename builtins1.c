@@ -66,13 +66,16 @@ void built_cd(char **toks)
 void change_directory(const char *directory)
 {
 	char predir[256];
+	char *cwd = NULL;
 
 	getcwd(predir, sizeof(predir));
 	if (chdir(directory) == 0)
 	{
 		/*Update the PWD environment variable*/
-		setenv("PWD", getcwd(NULL, 0), 1);
-		printf("%s\n", getcwd(NULL, 0));
+		cwd = getcwd(NULL, 0);
+		setenv("PWD", cwd, 1);
+		printf("%s\n", cwd);
+		free(cwd);
 	}
 	else
 	{

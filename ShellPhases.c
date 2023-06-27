@@ -2,7 +2,7 @@
 
 /**
 * ReadCmdL - reads line command from input stream
-* Return : char
+* Return: A pointer to a buffer
 */
 char *ReadCmdL(void)
 {
@@ -15,6 +15,7 @@ if (bytesRead == -1)
 {
 if (feof(stdin))
 {
+free(buffer);
 exit(EXIT_SUCCESS);
 }
 else
@@ -52,6 +53,13 @@ token = strtok(buffer, TOK_DELIM);
 while (token != NULL)
 {
 toks[i] = strdup(token);
+if (toks[i] == NULL)
+{
+free_array(toks);
+free(buffer);
+perror("ToknizeCmdL: allocation error\n");
+exit(EXIT_FAILURE);
+}
 i++;
 token = strtok(NULL, TOK_DELIM);
 }

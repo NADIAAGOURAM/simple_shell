@@ -10,7 +10,7 @@
 int main(int argc, char **argv)
 {
 char *cmdline = NULL;
-char **toks;
+char **toks = NULL;
 const int RUNNING = 1;
 (void)argc;
 (void)argv;
@@ -25,6 +25,7 @@ cmdline = ReadCmdL();
 if (cmdline == NULL)
 {
 	fprintf(stderr, "Error reading command line.\n");
+	free(cmdline);
 	exit(1);
 }
 toks = ToknizeCmdL(cmdline);
@@ -41,7 +42,10 @@ ExecCmdL(toks);
 }
 
 free_array(toks);
+free(cmdline);
 }
+free_array(environ);
+free_array(toks);
 free(cmdline);
 return (0);
 }
