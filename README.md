@@ -26,10 +26,10 @@ Task 9. <br>
 			Remove an environment variable <br>
 			Command syntax: unsetenv VARIABLE <br>
 			Should print something on stderr on failure <br>
-Task 10.
-	Implement the builtin command cd:
-		Changes the current directory of the process.
-		Command syntax: cd [DIRECTORY]
-		If no argument is given to cd the command must be interpreted like cd $HOME
-		You have to handle the command cd -
-		You have to update the environment variable PWD when you change directory
+Task 10. <br>
+	Implement the builtin command cd: <br>
+		Changes the current directory of the process. <br>
+		Command syntax: cd [DIRECTORY] <br>
+		If no argument is given to cd the command must be interpreted like cd $HOME <br>
+		You have to handle the command cd - <br>
+		You have to update the environment variable PWD when you change directory <br>
