@@ -56,7 +56,6 @@ void built_cd(char **toks)
 			}
 		}
 	}
-	free(predir);
 }
 
 /**
