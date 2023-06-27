@@ -16,16 +16,16 @@ Task 5. <br>
 Task 8. <br>
 	handle arguments for the built-in exit <br>
 	Usage: exit status, where status is an integer used to exit the shell <br>
-Task 9.
-	Implement the setenv and unsetenv builtin commands
-		setenv
-			Initialize a new environment variable, or modify an existing one
-			Command syntax: setenv VARIABLE VALUE
-			Should print something on stderr on failure
-		unsetenv
-			Remove an environment variable
-			Command syntax: unsetenv VARIABLE
-			Should print something on stderr on failure
+Task 9. <br>
+	Implement the setenv and unsetenv builtin commands <br>
+		setenv <br>
+			Initialize a new environment variable, or modify an existing one <br>
+			Command syntax: setenv VARIABLE VALUE <br>
+			Should print something on stderr on failure <br>
+		unsetenv <br>
+			Remove an environment variable <br>
+			Command syntax: unsetenv VARIABLE <br>
+			Should print something on stderr on failure <br>
 Task 10.
 	Implement the builtin command cd:
 		Changes the current directory of the process.
