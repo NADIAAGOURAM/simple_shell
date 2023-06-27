@@ -2,7 +2,7 @@
 
 /**
 * ReadCmdL - reads line command from input stream
-* Return : char
+* Return: A pointer to a buffer
 */
 char *ReadCmdL(void)
 {
