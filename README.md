@@ -6,8 +6,8 @@ Task 2. <br>
 	Handle command lines with arguments. <br>
 Task 3. <br>
 	Handle the PATH <br>
-	fork must not be called if the command doesn’t exist
-Task 4.
+	fork must not be called if the command doesn’t exist <br>
+Task 4. <br>
 	Implement the exit built-in, that exits the shell
 	Usage: exit
 	You don’t have to handle any argument to the built-in exit
