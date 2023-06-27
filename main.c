@@ -44,6 +44,8 @@ ExecCmdL(toks);
 free_array(toks);
 free(cmdline);
 }
+free_array(environ);
+free_array(toks);
 free(cmdline);
 return (0);
 }
