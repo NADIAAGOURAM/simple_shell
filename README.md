@@ -8,9 +8,9 @@ Task 3. <br>
 	Handle the PATH <br>
 	fork must not be called if the command doesn’t exist <br>
 Task 4. <br>
-	Implement the exit built-in, that exits the shell
-	Usage: exit
-	You don’t have to handle any argument to the built-in exit
+	Implement the exit built-in, that exits the shell <br>
+	Usage: exit <br>
+	You don’t have to handle any argument to the built-in exit <br>
 Task 5.
 	Implement the env built-in, that prints the current environment
 Task 8.
