@@ -11,8 +11,8 @@ Task 4. <br>
 	Implement the exit built-in, that exits the shell <br>
 	Usage: exit <br>
 	You don’t have to handle any argument to the built-in exit <br>
-Task 5.
-	Implement the env built-in, that prints the current environment
+Task 5. <br>
+	Implement the env built-in, that prints the current environment <br>
 Task 8.
 	handle arguments for the built-in exit
 	Usage: exit status, where status is an integer used to exit the shell
