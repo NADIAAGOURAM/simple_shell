@@ -2,7 +2,7 @@ C Simple Shell Project
 
 Task 1. <br>
 	Write a UNIX command line interpreter.<br>
-Task 2.
+Task 2. <br>
 	Handle command lines with arguments.
 Task 3.
 	Handle the PATH
