@@ -54,7 +54,7 @@ exit(EXIT_FAILURE);
 token = strtok(buffer, TOK_DELIM);
 while (token != NULL)
 {
-toks[i] = _strdup(token);
+toks[i] = strdup(token);
 if (toks[i] == NULL)
 {
 free_array(toks);
@@ -144,8 +144,6 @@ free(full_path);
 dir = strtok(NULL, ":");
 }
 }
-_printf("Command not found: ");
-_printf(cmd);
-_printf("\n");
+fprintf(stderr, "Command not found: %s\n", cmd);
 exit(EXIT_FAILURE);
 }
