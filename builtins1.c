@@ -97,7 +97,7 @@ void built_exit(char **toks)
 
 	if (toks[1] == NULL)
 	{
-		exit(0);
+		exit(2);
 	}
 	else
 	{
