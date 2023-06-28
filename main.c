@@ -32,7 +32,7 @@ toks = ToknizeCmdL(cmdline);
 if (toks == NULL)
 {
 	perror("Error tokenizing command line.\n");
-i	free(cmdline);
+	free(cmdline);
 	exit(1);
 }
 if (toks[0] != NULL)
